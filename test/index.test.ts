@@ -1,7 +1,6 @@
 import { Elysia } from "elysia";
-import { describe, beforeEach, test, expect, jest } from '@jest/globals'
 import { chatRouter } from "../src/routes/chatRouter";
-
+import { beforeEach, describe, test, expect } from "bun:test";
 
 describe("Elysia App", () => {
     let app: Elysia;
