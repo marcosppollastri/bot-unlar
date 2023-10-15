@@ -1,15 +1,27 @@
 {
-  "name": "hi-elysia",
-  "version": "1.0.50",
+  "name": "bot-unlar",
+  "version": "0.1.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "test": "bun test",
+    "jest:test": "jest ./test",
+    "start": "bun run src/index.ts",
+    "dev": "bun run --watch src/index.ts",
+    "docker:dev": "docker compose build && docker compose up"
   },
   "dependencies": {
     "elysia": "latest"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "@jest/globals": "^29.7.0",
+    "@types/jest": "^29.5.5",
+    "bun-types": "latest",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.2.2"
   },
-  "module": "src/index.js"
+  "module": "src/index.js",
+  "type": "module",
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
 }
